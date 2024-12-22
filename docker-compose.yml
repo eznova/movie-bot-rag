@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  movie-bot-rag:
+    build: .
+    container_name: movie-bot-rag
+    env_file:
+      - .env
+    restart: unless-stopped  # Контейнер будет автоматически перезапускаться, если он остановится
